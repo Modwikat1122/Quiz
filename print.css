@@ -1,0 +1,69 @@
+/* ============================================================
+   DWIKAT NURSING HUB — Print Styles
+   ============================================================ */
+
+@media print {
+  .site-header,
+  .breadcrumb,
+  .btn,
+  .exam-sidebar,
+  .site-footer,
+  #toast,
+  .btn-admin-link,
+  .header-right {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+  }
+
+  .results-hero {
+    background: #1a56db !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    border-radius: 8px;
+    page-break-inside: avoid;
+  }
+
+  .review-question {
+    page-break-inside: avoid;
+    margin-bottom: 12pt;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: none !important;
+  }
+
+  .review-question.correct {
+    border-left-color: #16a34a !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .review-question.incorrect {
+    border-left-color: #dc2626 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .review-rationale {
+    background: #eff6ff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page-container-md {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  h2.section-title,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  @page {
+    margin: 2cm;
+  }
+}
