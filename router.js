@@ -12,14 +12,13 @@ const Router = (() => {
   }
 
   function navigate(path, replaceState = false) {
-    const url = '#' + path;
-    if (replaceState) {
-      window.history.replaceState(null, '', url);
-    } else {
-      window.history.pushState(null, '', url);
-    }
-    render(path);
+  const url = '#' + path;
+  if (replaceState) {
+    location.replace(url);
+  } else {
+    location.hash = path;
   }
+}
 
   function getPath() {
     const hash = window.location.hash;
